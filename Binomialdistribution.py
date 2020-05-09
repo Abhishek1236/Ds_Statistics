@@ -85,18 +85,7 @@ class Binomial(Distribution):
         plt.xlabel('Outcomes')
         plt.ylabel('Count')
         plt.title('Binomial distribution chart')
-        # TODO: Use the matplotlib package to plot a bar chart of the data
-        #       The x-axis should have the value zero or one
-        #       The y-axis should have the count of results for each case
-        #
-        #       For example, say you have a coin where heads = 1 and tails = 0.
-        #       If you flipped a coin 35 times, and the coin landed on
-        #       heads 20 times and tails 15 times, the bar chart would have two bars:
-        #       0 on the x-axis and 15 on the y-axis
-        #       1 on the x-axis and 20 on the y-axis
-
-        #       Make sure to label the chart with a title, x-axis label and y-axis label
-
+       
     def pdf(self, k):
         """Probability density function calculator for the gaussian distribution.
 
@@ -108,13 +97,7 @@ class Binomial(Distribution):
             float: probability density function output
         """
 
-        # TODO: Calculate the probability density function for a binomial distribution
-        #  For a binomial distribution with n trials and probability p,
-        #  the probability density function calculates the likelihood of getting
-        #   k positive outcomes.
-        #
-        #   For example, if you flip a coin n = 60 times, with p = .5,
-        #   what's the likelihood that the coin lands on heads 40 out of 60 times?
+     
 
         first_part = (math.factorial(self.n)/(math.factorial(k) * math.factorial(self.n - k)))
         second_part = ((self.p) ** k)*((1-self.p)**(self.n - k))
@@ -133,16 +116,7 @@ class Binomial(Distribution):
 
         """
 
-        # TODO: Use a bar chart to plot the probability density function from
-        # k = 0 to k = n
-
-        #   Hint: You'll need to use the pdf() method defined above to calculate the
-        #   density function for every value of k.
-
-        #   Be sure to label the bar chart with a title, x label and y label
-
-        #   This method should also return the x and y values used to make the chart
-        #   The x and y values should be stored in separate lists
+     
 
         x = []
         y = []
@@ -180,19 +154,7 @@ class Binomial(Distribution):
 
         return result
 
-        # TODO: Define addition for two binomial distributions. Assume that the
-        # p values of the two distributions are the same. The formula for
-        # summing two binomial distributions with different p values is more complicated,
-        # so you are only expected to implement the case for two distributions with equal p.
-
-        # the try, except statement above will raise an exception if the p values are not equal
-
-        # Hint: You need to instantiate a new binomial object with the correct n, p,
-        #   mean and standard deviation values. The __add__ method should return this
-        #   new binomial object.
-
-        #   When adding two binomial distributions, the p value remains the same
-        #   The new n value is the sum of the n values of the two distributions.
+ 
 
     def __repr__(self):
         """Function to output the characteristics of the Binomial instance
